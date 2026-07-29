@@ -5,7 +5,7 @@ export const SITE = {
     "Syed Ali Hasan Moosavi | AI Engineer | Full Stack Developer | Founder | Blockchain Developer",
   description:
     "Syed Ali Hasan Moosavi is an AI Engineer, Full Stack Developer, Blockchain Developer and Founder of SAYANJALI NEXUS PRIVATE LIMITED. Explore AI products, Web3 applications, SaaS platforms, automation tools, open-source projects, research, experience, certifications and innovative software engineering solutions.",
-  url: "https://shalimoosavi.github.io/moosavi-v2", // update to final deployment URL
+  url: "https://shalimoosavi.github.io/Me", // update to final deployment URL
   locale: "en_US",
   role: "Founder & Managing Director",
   company: "SAYANJALI NEXUS PRIVATE LIMITED",
