@@ -4,8 +4,8 @@
   "private": true,
   "description": "Award-tier interactive portfolio for Syed Ali Hasan Moosavi — AI Engineer, Full Stack Developer, Blockchain Developer, Founder of SAYANJALI NEXUS PRIVATE LIMITED.",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
