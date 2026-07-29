@@ -1,0 +1,41 @@
+{
+  "name": "syed-ali-hasan-moosavi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Award-tier interactive portfolio for Syed Ali Hasan Moosavi — AI Engineer, Full Stack Developer, Blockchain Developer, Founder of SAYANJALI NEXUS PRIVATE LIMITED.",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.6.0",
+    "gsap": "^3.12.5",
+    "framer-motion": "^11.11.0",
+    "three": "^0.171.0",
+    "@react-three/fiber": "^9.0.0",
+    "@react-three/drei": "^10.0.6",
+    "lenis": "^1.1.14",
+    "lucide-react": "^0.451.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4",
+    "class-variance-authority": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.171.0",
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.12.0",
+    "eslint-config-next": "^16.0.0",
+    "@eslint/eslintrc": "^3.1.0"
+  }
+}

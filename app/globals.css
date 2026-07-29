@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #232331 transparent;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-obsidian text-bone font-body antialiased;
+  font-feature-settings: "ss01" on, "ss02" on;
+}
+
+::selection {
+  background-color: theme("colors.ledger.400");
+  color: theme("colors.obsidian.DEFAULT");
+}
+
+/* ---------- Focus (accessibility) ---------- */
+:focus-visible {
+  outline: 2px solid theme("colors.ledger.400");
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Ledger grid backdrop ---------- */
+.bg-ledger-field {
+  background-image: theme("backgroundImage.ledger-grid");
+  background-size: 56px 56px;
+}
+
+/* ---------- Glass panel ---------- */
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(237, 235, 226, 0.06),
+    rgba(237, 235, 226, 0.02)
+  );
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(237, 235, 226, 0.08);
+}
+
+/* ---------- Section eyebrow ---------- */
+.eyebrow {
+  @apply font-mono text-xs uppercase tracking-widest2 text-ledger-400;
+}
+
+/* ---------- Custom cursor (desktop only; disabled under reduced motion) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none-desktop {
+    cursor: none;
+  }
+}
+
+/* ---------- Noise texture overlay ---------- */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-ledger-400 px-4 py-2 font-mono text-sm font-medium text-obsidian transition-transform focus:translate-y-0;
+}
